@@ -1,3 +1,4 @@
+require("http").createServer((req, res) => { res.writeHead(200, { "Content-Type": "text/plain" }); res.end("Hello World\n"); }).listen(process.env.PORT, "0.0.0.0");
 const Intent = 32767
 const Discord = require("discord.js");
 const client = new Discord.Client({
