@@ -1,6 +1,8 @@
-require("http").createServer((req, res) => { res.writeHead(200, { "Content-Type": "text/plain" }); res.end("Hello World\n"); }).listen(process.env.PORT, "0.0.0.0");
+const Intent = 32767
 const Discord = require("discord.js");
-const client = new Discord.Client();
+const client = new Discord.Client({
+intents: Intent, 
+});
 client.login("ODAxNzkxMzU0MjM2ODI5Njk3.GPm725.g7wWNqeB42SD-xQQmsi0uCKsHrKmRVyHDfHIFw")
 const url = require("url");
 const path = require("path");
@@ -89,4 +91,3 @@ app.use(express.static("assets"));
 	  
 	
 		})
-		 
