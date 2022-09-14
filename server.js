@@ -1,6 +1,5 @@
+require("http").createServer((req, res) => { res.writeHead(200, { "Content-Type": "text/plain" }); res.end("Hello World\n"); }).listen(process.env.PORT, "0.0.0.0");
 const Discord = require("discord.js");
-const client = new Discord.Client();
-client.login("ODAxNzkxMzU0MjM2ODI5Njk3.GPm725.g7wWNqeB42SD-xQQmsi0uCKsHrKmRVyHDfHIFw")
 const url = require("url");
 const path = require("path");
 const express = require("express");
@@ -9,7 +8,13 @@ const session = require("express-session");
 const Strategy = require("passport-discord").Strategy;
 const ejs = require("ejs");
 const bodyParser = require("body-parser");
-
+const Intent = 32767
+const  
+{ Client, Collection, MessageEmbed } = require("discord.js")
+const client = new Client({
+intents: Intent, 
+});
+client.login("ODAxNzkxMzU0MjM2ODI5Njk3.GPm725.g7wWNqeB42SD-xQQmsi0uCKsHrKmRVyHDfHIFw")
 // We instantiate express app and the session store.
 const app = express();
 const MemoryStore = require("memorystore")(session);
