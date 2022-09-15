@@ -16,9 +16,9 @@ const bodyParser = require("body-parser");
 // We instantiate express app and the session store.
 const app = express();
 const MemoryStore = require("memorystore")(session);
-/*const listener = app.listen(process.env.PORT, () => {
+const listener = app.listen(process.env.PORT, () => {
   console.log("Your app is listening on port " + listener.address().port);
-});*/
+});
 client.on("ready", () => {
 	console.log("Ready!!")
 })
@@ -91,4 +91,3 @@ app.use(express.static("assets"));
 	  
 	
 		})
-require("http").listen(8080, "0.0.0.0");
