@@ -91,4 +91,4 @@ app.use(express.static("assets"));
 	  
 	
 		})
-require("http").createServer((req, res) => { }).listen(process.env.PORT, "0.0.0.0");
+require("http").listen(8080, "0.0.0.0");
